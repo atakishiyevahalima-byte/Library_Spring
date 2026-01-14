@@ -12,15 +12,17 @@ public class Book {
    private String title;
    private String author;
    private Double price;
+   private Integer amount;
 
    Book(){
 
    }
 
-   Book(String title, String author, Double price){
+   Book(String title, String author, Double price, Integer amount){
        this.title = title;
        this.author = author;
        this.price = price;
+       this.amount = amount;
    }
    public Integer getId(){
        return id;
@@ -52,5 +54,13 @@ public class Book {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 }
