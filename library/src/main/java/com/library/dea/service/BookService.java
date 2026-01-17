@@ -2,6 +2,8 @@ package com.library.dea.service;
 
 import com.library.dea.entity.Book;
 import com.library.dea.repository.BookRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,6 +28,10 @@ public class BookService {
         return bookRepository.findAll();
     }
 
+    //pagination
+    public Page<Book> getBooks(Pageable pageable){
+        return bookRepository.findAll(pageable);
+    }
     public List<Book> getAllByTitle(@PathVariable String title){
         return bookRepository.findByTitle(title);
     }
