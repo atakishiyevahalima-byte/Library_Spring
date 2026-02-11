@@ -1,5 +1,6 @@
 package com.library.dea.dto;
 
+import com.library.dea.validation.ValidPrice;
 import jakarta.validation.constraints.*;
 
 public class BookDTO {
@@ -11,8 +12,9 @@ public class BookDTO {
     @Size(min = 4, max = 100, message = "Author must be 4-100 characters")
     private String author;
     @NotNull(message = "Price обязательно!!")
-    @DecimalMin(value = "0.01", message = "Price must be at least 0.01")
-    @Digits(integer = 10, fraction = 2, message = "Price format: up to 10 digits and 2 decimals")
+    // @DecimalMin(value = "0.01", message = "Price must be at least 0.01")
+    // @Digits(integer = 10, fraction = 2, message = "Price format: up to 10 digits and 2 decimals")
+    @ValidPrice
     private Double price;
     @NotNull(message = "Amount обязательно!!")
     @Min(value = 1, message = "Min amount must be at least 1")
