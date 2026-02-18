@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f6f8fb;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        h2 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            padding: 10px 20px;
+            background: #4a90e2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            background: #357abd;
+        }
+    </style>
 </head>
 <body>
-<h2>Error</h2>
+<h2>Error 404</h2>
 <p th:text="${errorMessage}"></p>
-<a th:href="@{/books}">Back</a>
+<a href="/books">Back</a>
 </body>
 </html>
