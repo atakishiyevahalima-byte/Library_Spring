@@ -14,6 +14,16 @@ public class User {
     private String password;
     @Column(nullable = false)
     private boolean enabled;
+    @Column(nullable = false)
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public Integer getId() {
         return id;
