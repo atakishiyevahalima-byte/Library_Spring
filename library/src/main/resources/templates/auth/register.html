@@ -29,5 +29,90 @@
   <p>
     <a th:href="@{/login}">Back to login</a>
   </p>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        margin: 0;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;   /* всё по вертикали */
+        justify-content: center;  /* по центру по высоте */
+        align-items: center;      /* по центру по ширине */
+    }
+
+    h2 {
+        color: white;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    form {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        width: 380px;
+    }
+
+    form div {
+        margin-bottom: 18px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #444;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+        outline: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background-color: #667eea;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #5a67d8;
+    }
+
+    p {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
 </body>
 </html>
