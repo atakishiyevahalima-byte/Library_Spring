@@ -2,15 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Access Denied</title>
+    <title>Title</title>
 </head>
 <body>
 <a th:href="@{?lang=en}">EN</a>
 <a th:href="@{?lang=ru}">RU</a>
 <a th:href="@{?lang=az}">AZ</a>
-<h3 th:text="#{error.accessdenied}"></h3>
-<p>У вас нет прав для этой страницы.</p>
-
-<a th:href="@{/books}" th:text="#{button.backtobooks}"></a>
+<h2>409 - Username Already Exists</h2>
+<p th:text="${errorMessage}"></p>
+<a href="/books" th:text="#{button.back}"></a>
 </body>
 </html>
