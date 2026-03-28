@@ -29,6 +29,13 @@ public class AuthorPageController {
         return"authors/new";
     }
 
+    @PostMapping("/save")
+    public String save(@ModelAttribute AuthorDTO authorDTO){
+        authorService.createAuthor(authorDTO);
+
+        return "redirect:/authors";
+    }
+
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Long id, Model model){
         model.addAttribute("author", authorService.getAuthorById(id));
@@ -46,5 +53,10 @@ public class AuthorPageController {
         return "redirect:/authors";
     }
 
-    
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id){
+        authorService.deleteAuthor(id);
+        return "redirect:/authors";
+    }
+
 }
