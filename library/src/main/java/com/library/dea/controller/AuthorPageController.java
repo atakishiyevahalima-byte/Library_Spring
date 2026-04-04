@@ -16,6 +16,7 @@ public class AuthorPageController {
         this.authorService = authorService;
     }
 
+
     @GetMapping
     public String list(Model model){
         model.addAttribute("authors", authorService.getAllAuthors());

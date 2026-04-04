@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Authors</h1>
+<a th:href="@{/authors/new}">New Author</a>
 <table border="1">
     <thead>
     <tr>
@@ -27,5 +28,6 @@
     </tr>
     </tbody>
 </table>
+<a th:href="@{/books}" th:text="#{button.backtobooks}"></a>
 </body>
 </html>
