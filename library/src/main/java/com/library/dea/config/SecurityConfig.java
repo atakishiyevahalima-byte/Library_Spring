@@ -17,14 +17,14 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(auth -> auth
                         //swagger
-                 .requestMatchers("/swagger/ui/**", "/v3/api-docs/**", "/api/books/**")
+                 .requestMatchers("/swagger/ui/**", "/v3/api-docs/**")
                  .permitAll()
                         //public pages
                  .requestMatchers("/login", "/register", "/css/**", "/js/**")
                  .permitAll()
                 .requestMatchers("/books/new", "/books/edit/**", "/books/delete/**")
                 .hasRole("ADMIN")
-                .requestMatchers("/books/**")
+                .requestMatchers("/api/books/**")
                 .hasAnyRole("USER", "ADMIN")
                 .anyRequest().authenticated()
 
